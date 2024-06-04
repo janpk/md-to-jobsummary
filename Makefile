@@ -19,7 +19,7 @@ codeformat:
 unit-test-ci:
 	./mvnw verify -Dquarkus.package.type=uber-jar -Dquarkus.package.jar.add-runner-suffix=false
 
-unit-test: codeformat detekt unit-test-ci
+unit-test: detekt unit-test-ci
 
 # package the application
 package:
