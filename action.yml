@@ -37,7 +37,7 @@ runs:
       uses: jbangdev/setup-jbang@main
     - name: Run the action
       id: action
-      run: jbang --java 21 --fresh --repos 'quarkus-github-action=https://maven.pkg.github.com/janpk/md-to-jobsummary/' --repos 'mavencentral' dev.hagastua.action:md-to-jobsummary:999-SNAPSHOT
+      run: jbang --java 21 --fresh --repos 'quarkus-github-action=https://maven.pkg.github.com/janpk/md-to-jobsummary/' --repos 'mavencentral' dev.hagastua.action:md-to-jobsummary:1.0.0-SNAPSHOT
       shell: bash
       env:
         JSON_INPUTS: ${{ toJSON(inputs) }}
