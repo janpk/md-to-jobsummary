@@ -9,4 +9,4 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/janpk/md-to-jobsummary:v1'
+  image: 'docker://ghcr.io/janpk/md-to-jobsummary:v1.1'
