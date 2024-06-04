@@ -1,0 +1,12 @@
+name: 'Markdown To JobSummary'
+description: 'Takes a markdown input file and publishes it to a github workflows job summary'
+inputs:
+  github-token:
+    description: 'GitHub token'
+    required: false
+  file:
+    description: 'Name of the markdownfile to append to the job summary'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/janpk/md-to-jobsummary:main'
