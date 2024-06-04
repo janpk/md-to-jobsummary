@@ -10,11 +10,9 @@ open class MdToJobSummaryAction {
 
   @Action
   fun action(inputs: Inputs, commands: Commands) {
-    commands.notice("Hello from Quarkus GitHub Action")
-
     val markdownFile = File(inputs.getRequired("file"))
     if (!markdownFile.exists()) {
-      commands.error("Specified file does not exist")
+      commands.error("Specified file does not exist ${markdownFile.absolutePath}")
     }
     commands.appendJobSummary(markdownFile.readText(Charset.defaultCharset()))
   }
