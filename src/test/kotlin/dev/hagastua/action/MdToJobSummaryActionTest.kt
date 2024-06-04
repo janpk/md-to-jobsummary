@@ -27,9 +27,9 @@ class MdToJobSummaryActionTest {
   @Test
   @Launch()
   fun `Verify that job summary is populated`() {
-//    assertThat(Path.of(System.getProperty("java.io.tmpdir") + "/temp-github-summary.txt"))
-//        .content()
-//        .contains("# Test Markdown" + System.lineSeparator())
+    assertThat(Path.of(System.getProperty("java.io.tmpdir") + "/temp-github-summary.txt"))
+        .content()
+        .contains("# Test Markdown" + System.lineSeparator())
   }
 
   class MdToJobSummaryActionTestStatusProfile : QuarkusTestProfile {
@@ -45,8 +45,7 @@ class MdToJobSummaryActionTest {
     override fun createInputs(): Inputs {
       return DefaultTestInputs(
           mapOf<String, String>(
-              Pair("file", "src/test/resources/test.md"),
-          ))
+              Pair("file", "src/test/resources/test.md"), Pair(Inputs.ACTION, "jobsummary")))
     }
   }
 

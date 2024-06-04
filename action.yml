@@ -4,6 +4,9 @@ inputs:
   github-token:
     description: 'GitHub token'
     required: true
+  action:
+    description: 'Name of the action (if named)'
+    required: false
   file:
     description: 'Name of the markdownfile to append to the job summary'
     required: true
