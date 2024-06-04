@@ -20,10 +20,10 @@ open class MdToJobSummaryAction {
     }
     commands.appendJobSummary(markdownFile.readText(Charset.defaultCharset()))
     if (pullRequest != null) {
-      println(pullRequest.pullRequest)
+      commands.notice(pullRequest.pullRequest.toString())
       pullRequest.pullRequest.comment(markdownFile.readText(Charset.defaultCharset()))
     } else {
-      println("not pull request")
+      commands.notice("not pull request")
     }
   }
 }
