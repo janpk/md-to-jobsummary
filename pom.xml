@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>dev.hagastua.action</groupId>
     <artifactId>md-to-jobsummary</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Markdown To JobSummary</name>
     <description>Takes a markdown input file and publishes it to a github workflows job summary</description>
 
