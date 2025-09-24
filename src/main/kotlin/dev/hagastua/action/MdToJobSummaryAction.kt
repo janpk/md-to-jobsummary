@@ -38,9 +38,7 @@ open class MdToJobSummaryAction {
     val body = buildString {
       appendLine(marker)
       appendLine()
-      appendLine("```text")
       appendLine(markdownFile.readText(Charset.defaultCharset()))
-      appendLine("```")
       appendLine()
     }
     
