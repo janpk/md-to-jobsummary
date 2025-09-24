@@ -54,8 +54,6 @@ open class MdToJobSummaryAction {
       val created = pullRequest.pullRequest.comment(body)
       Log.info("Created new sticky comment id=${created.id}")
     }
-    
-    pullRequest.pullRequest.comment(markdownFile.readText(Charset.defaultCharset()))
   }
   
   companion object {
